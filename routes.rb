@@ -21,10 +21,10 @@ connect 'sitemap.xml', :controller => "sitemap", :action => "index", :format => 
 connect 'sitemap', :controller => "sitemap", :action => "index"
 
 if AppConfig.closed_beta_mode
-  connect '', :controller => "base", :action => "teaser"
+  connect 'teaser', :controller => "base", :action => "teaser"
   home 'home', :controller => "base", :action => "site_index"
 else
-  home '', :controller => "base", :action => "site_index"
+  home 'home', :controller => "base", :action => "site_index"
 end
 connect '/application/:action', :controller => 'base'
 
