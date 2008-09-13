@@ -83,7 +83,7 @@ resources :metro_areas
 resources :ads
 resources :contests, :member => { :latest => :get }
 
-resources :users, :member_path => '/:id', :nested_member_path => '/:user_id', :member => { 
+resources :users, :member_path => 'users/:id', :nested_member_path => 'users/:user_id', :member => { 
     :dashboard => :get,
     :assume => :get,
     :toggle_moderator => :put,
