@@ -112,6 +112,7 @@ resources :users, :member_path => 'users/:id', :nested_member_path => 'users/:us
   user.resources :invitations
   user.resources :offerings, :collection => {:replace => :put}
   user.resources :favorites, :name_prefix => 'user_'
+  user.resources :messages, :collection => { :delete_selected => :post }  
 end
 resources :votes
 
