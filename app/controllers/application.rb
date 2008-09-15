@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   #For the session key see environment.rb!
   exempt_from_layout :builder
   before_filter :set_language_to_english, :set_person
-  
+   
   def set_language_to_english
     @language = Language.find_by_iso_code("en")
   end
@@ -33,6 +33,10 @@ class ApplicationController < ActionController::Base
       flash[:notice] = "Invalid subdomain, this language is not supported yet."
       redirect_to(root_url)
     end
+  end
+  
+  def default_url_options(options)
+    { :trailing_slash => true }
   end
   
   def set_flash(options)
