@@ -1,9 +1,9 @@
-community_name: "Community"
-community_tagline: "CommunityEngine Rocks!"
-community_description:  "The Best Place for People Who Love Communities"
-support_email:  "support@community.com"
-meta_description: 'A description of your community for use in META tags.'
-meta_keywords: 'keywords for use in META tags'
+community_name: "AppAppeal"
+community_tagline: "Reviews of Web Based Applications"
+community_description:  "The Best Place for People Who Love Web Based Applications"
+support_email:  "info@comcoaster.com"
+meta_description: 'Reviews of Web Based Applications.'
+meta_keywords: 'web-app, review, program, online'
 sections_enabled: ['photos', 'posts', 'clippings', 'contests', 'categories', 'events']
 show_advertising: false
 closed_beta_mode: false
@@ -30,7 +30,7 @@ photo:
     max_size: 3
     thumbnails: {thumb: "100x100!", medium: "290x320!", large: "664>"}
     #options - 's3', 'file_system', 'db_system' - see attachment_fu for details
-    storage: 'file_system'
+    storage: 's3'
     content_type: ['image/jpg', 'image/jpeg', 'image/pjpeg', 'image/gif', 'image/png', 'image/x-png']
       
 feature:
@@ -41,7 +41,7 @@ feature:
     min_size: 1    
     max_size: 1
     thumbnails: {thumb: '45x45!', large: '635x150!'}    
-    storage: 'file_system'
+    storage: 's3'
     content_type: ['image/jpg', 'image/jpeg', 'image/pjpeg', 'image/gif', 'image/png', 'image/x-png']
         
 clipping:
@@ -50,5 +50,5 @@ clipping:
     min_size: 1    
     max_size: 3
     thumbnails: {thumb: "100x100!", medium_square: "200x200!", medium: "200>"}
-    storage: 'file_system'
+    storage: 's3'
     content_type: ['image/jpg', 'image/jpeg', 'image/pjpeg', 'image/gif', 'image/png', 'image/x-png']
