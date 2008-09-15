@@ -44,7 +44,7 @@ class ContestsController < BaseController
       if @contest.save
         flash[:notice] = 'Contest was successfully created.'.l
         
-        format.html { redirect_to (contest_url(@contest)) }
+        format.html { redirect_to contest_url(@contest) }
         format.xml do
           headers["Location"] = contest_url(@contest)
           render :nothing => true, :status => "201 Created"
