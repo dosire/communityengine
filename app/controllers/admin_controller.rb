@@ -1,6 +1,10 @@
 class AdminController < BaseController
   before_filter :admin_required
   
+  def index
+    redirect_to :action => :users
+  end
+  
   def users
     cond = Caboose::EZ::Condition.new
     if params['login']    
