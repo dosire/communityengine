@@ -104,3 +104,15 @@ resend_activation_email_link: Click here to re-send your activation e-mail.
 activation_email_resent_message: Activation e-mail was re-sent. Go check your e-mail! Make sure {admin_email} is not on your spam blacklist.
 #activation_email_not_sent_message
 activation_email_not_sent_message: Activation e-mail could not be sent. Perhaps that user is already active?
+
+clippings_let_you_to_save_cool_images_from_around_the_web: Clippings allows you to save cool images from the web.
+drag_the_bookmarklet: Drag the bookmarklet named {site} it! to your bookmark toolbar.
+when_you_see_an_image_you_like_on_the_web: When you see an image you like on the web click on the bookmarklet.
+drag_this_to_your_bookmarks_toolbar: Drag this to your bookmark toolbar.
+user_clippings: User clippings
+you_have_no_clippings_use_the_bookmarklet_on_the_right_to_add_some: You don't have any clippings yet, use the bookmarklet yo add some.
+no_clippings_yet: No clippings
+
+
+
+
