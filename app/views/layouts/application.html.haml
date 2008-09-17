@@ -1,8 +1,9 @@
 -initialize
+-@community_engine = true
 = render :partial => "shared/header"
 
 #doc2{:class => "yui-t#{@sidebar_left ? 3 : 6}"}
-  = render :partial => "shared/header"
+  = render :partial => "shared/header_content"
         
   #bd
     = render :partial => "shared/messages"
@@ -41,5 +42,7 @@
 
     %p
       = :community_tagline.l
-          
+  / start background-color hack ie6
+  %div{'style' => "clear:both"}
+  / end background-color hack ie6
 = render :partial => "shared/footer"
