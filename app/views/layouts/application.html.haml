@@ -1,48 +1,48 @@
 -initialize
 -@community_engine = true
 = render :partial => "shared/header"
-
-#doc2{:class => "yui-t#{@sidebar_left ? 3 : 6}"}
-  = render :partial => "shared/header_content"
-        
-  #bd
-    = render :partial => "shared/messages"
-              
-    = @content_for_layout
-                        
-  #ft
-    -if show_footer_content?    
-      .yui-gc#footer_content
-        = image_tag 'spinner.gif', :plugin => 'community_engine'
-        ="Loading recent content...".l       
-
-      %script{:type=>"text/javascript"}
-        = remote_function(:update => "footer_content", :url => { :controller => 'base', :action => 'footer_content' })
-
-  #CommunityFooter
-    %ul
-      %li
-        %a{:href=>"/", :title=>"#{AppConfig.community_name} Home"}= "Home".l
-      - if !logged_in?
-        %li
-          = link_to :log_in.l , login_path 
-      - else
-        %li
-          %a{:href=>"/logout", :title=>"Log out of your #{AppConfig.community_name} account"}
-            ="Log Out".l
-      %li
-        %a{:href=>"/about", :title=>"What is #{AppConfig.community_name}?"}
-          ="About".l
-      %li
-        %a{:href=>"/faq", :title=>"Frequent Asked Questions".l}
-          ="FAQ".l
+.wrapper_ce
+  #doc2{:class => "yui-t#{@sidebar_left ? 3 : 6}"}
+    = render :partial => "shared/header_content"
           
-      - if @rss_title && @rss_url
-        %li#rss= link_to "RSS".l, @rss_url, {:title => @rss_title}
-
-    %p
-      = :community_tagline.l
-  / start background-color hack ie6
-  %div{'style' => "clear:both"}
-  / end background-color hack ie6
+    #bd
+      = render :partial => "shared/messages"
+                
+      = @content_for_layout
+                          
+    #ft
+      -if show_footer_content?    
+        .yui-gc#footer_content
+          = image_tag 'spinner.gif', :plugin => 'community_engine'
+          ="Loading recent content...".l       
+  
+        %script{:type=>"text/javascript"}
+          = remote_function(:update => "footer_content", :url => { :controller => 'base', :action => 'footer_content' })
+  
+    #CommunityFooter
+      %ul
+        %li
+          %a{:href=>"/", :title=>"#{AppConfig.community_name} Home"}= "Home".l
+        - if !logged_in?
+          %li
+            = link_to :log_in.l , login_path 
+        - else
+          %li
+            %a{:href=>"/logout", :title=>"Log out of your #{AppConfig.community_name} account"}
+              ="Log Out".l
+        %li
+          %a{:href=>"/about", :title=>"What is #{AppConfig.community_name}?"}
+            ="About".l
+        %li
+          %a{:href=>"/faq", :title=>"Frequent Asked Questions".l}
+            ="FAQ".l
+            
+        - if @rss_title && @rss_url
+          %li#rss= link_to "RSS".l, @rss_url, {:title => @rss_title}
+  
+      %p
+        = :community_tagline.l
+    / start background-color hack ie6
+    %div{'style' => "clear:both"}
+    / end background-color hack ie6
 = render :partial => "shared/footer"
