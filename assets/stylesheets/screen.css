@@ -1019,6 +1019,9 @@ table.poll {
 	padding-right: 15px;
 	background: url(/plugin_assets/community_engine/images/icons/bullet_arrow_down_50.png) no-repeat right;
 	}
+#user-menu a {
+	color:#cbfe33;
+	}
 #user-menu:hover {
 	background: url(/plugin_assets/community_engine/images/icons/bullet_arrow_down.png) no-repeat right;	
 }
