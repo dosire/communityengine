@@ -106,7 +106,6 @@ class UsersController < BaseController
   def update
     @user.attributes = params[:user]
     @metro_areas, @states = setup_locations_for(@user)
-
     unless params[:metro_area_id].blank?
       @user.metro_area = MetroArea.find(params[:metro_area_id])
       @user.state = (@user.metro_area && @user.metro_area.state) ? @user.metro_area.state : nil
@@ -114,7 +113,8 @@ class UsersController < BaseController
     else
       @user.metro_area = nil
       @user.state = nil
-      @user.country = nil
+      #Adapt behaviour to save with only country selected.
+      @user.country = Country.find(params[:country_id]) if params[:country_id]
     end
   
     @avatar = Photo.new(params[:avatar])
