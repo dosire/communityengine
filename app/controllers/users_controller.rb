@@ -114,7 +114,11 @@ class UsersController < BaseController
       @user.metro_area = nil
       @user.state = nil
       #Adapt behaviour to save with only country selected.
-      @user.country = Country.find(params[:country_id]) if params[:country_id]
+      if not params[:country_id].empty?
+        @user.country = Country.find(params[:country_id])
+      else
+        @user.country = nil
+      end
     end
   
     @avatar = Photo.new(params[:avatar])
