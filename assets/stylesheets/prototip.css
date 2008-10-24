@@ -22,6 +22,7 @@
 	line-height: 0;
 	font-size: 0px;
 	border: 0;
+        width:200px;
 	}
 .prototip .toolbar a.close:hover { background: transparent url(close_hover.gif); }
 
