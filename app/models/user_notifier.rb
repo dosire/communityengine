@@ -100,7 +100,7 @@ class UserNotifier < ActionMailer::Base
   end
   
   def setup_sender_info
-    @from        = "The #{AppConfig.community_name} Team <#{AppConfig.support_email}>"    
+    @from        = "The #{AppConfig.community_name} Team <#{AppConfig.send_email}>"    
   end
   
 end
